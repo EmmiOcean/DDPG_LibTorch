@@ -139,9 +139,9 @@ void Agent::soft_update(std::shared_ptr<torch::nn::Module> local, std::shared_pt
 {
 //    Soft update model parameters.
 //    θ_target = τ*θ_local + (1 - τ)*θ_target
-
+    torch::NoGradGuard no_grad;
     for (size_t i = 0; i < target->parameters().size(); i++) {
-        target->parameters()[i] = (tau * local->parameters()[i] + (1.0 - tau) * target->parameters()[i]);
+        target->parameters()[i].copy_(tau * local->parameters()[i] + (1.0 - tau) * target->parameters()[i]);
     }
 }
 
