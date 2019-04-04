@@ -1,11 +1,11 @@
 # DDPG_LibTorch
-An Implementation of the DDPG Algorithm in LibTorch
+An implementation of the DDPG Algorithm in LibTorch
 
-As environment I used OpenAIGym
-[C++ OpenAiGym API](https://github.com/openai/gym-http-api)
+As environment I used OpenAi-Gym
+[C++ OpenAi-Gym API](https://github.com/openai/gym-http-api)
 
 and 
 
 [JSON for Modern C++](https://github.com/nlohmann/json)
 
-So far I am not able to train the system
+I'm still trying to figure out why the network is not learning any policy
